@@ -1,0 +1,13 @@
+namespace: wordpress
+
+resources:
+  - services.yaml
+  - wordpress.yaml
+  - mysql.yaml
+
+secretGenerator:
+  - name: mysql-pass
+    literals:
+      # XXX:
+      # 任意のパスワードに書きかえること
+      - password=admin
